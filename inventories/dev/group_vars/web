@@ -1,1 +1,3 @@
 someapps: httpd
+someservices: httpd
+statelevel: started

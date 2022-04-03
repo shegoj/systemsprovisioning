@@ -11,4 +11,7 @@
       yum:
         name: "{{ someapps }}"
         state: present 
-    
+    - name: Start service httpd, if not started
+      ansible.builtin.service:
+        name: "{{ someservices }}"
+        state: "{{ statelevel }}"
