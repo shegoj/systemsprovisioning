@@ -22,7 +22,7 @@ pipeline {
                 ansiblePlaybook(
                     credentialsId: 'SSH_AGENT_CONNECT', 
                     inventory: 'inventories/dev', 
-                    playbook: 'webdeply.yml'
+                    playbook: 'webdeploy.yml'
                 )
             }
         }
