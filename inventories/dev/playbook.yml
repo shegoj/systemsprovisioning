@@ -1,0 +1,14 @@
+---
+- name: systems provisionng
+  hosts: web, app
+
+  become: yes 
+  become_method: sudo
+  remote_user: ec2-user
+
+  tasks: 
+    - name: install apps needed
+      yum:
+        name: "{{ someapps }}"
+        state: present 
+    

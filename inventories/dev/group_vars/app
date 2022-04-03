@@ -1,0 +1,4 @@
+someapps:
+  - java-1.8.0-openjdk-devel-debug.x86_64
+  - tomcat
+  
