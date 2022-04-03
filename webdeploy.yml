@@ -6,7 +6,7 @@
   become_method: sudo
   remote_user: ec2-user
 
- tasks: 
+  tasks: 
     - name: install apps needed
       copy:
         src: index.html
