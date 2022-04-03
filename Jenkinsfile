@@ -14,6 +14,18 @@ pipeline {
                 )
             }
         }
+            stage ('web deploy') {
+            environment  {
+                ANSIBLE_HOST_KEY_CHECKING = 'False'
+            }
+            steps { 
+                ansiblePlaybook(
+                    credentialsId: 'SSH_AGENT_CONNECT', 
+                    inventory: 'inventories/dev', 
+                    playbook: 'webdeply.yml'
+                )
+            }
+        }
     }
     post {
         always {
