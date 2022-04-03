@@ -6,8 +6,12 @@ pipeline {
             environment  {
                 ANSIBLE_HOST_KEY_CHECKING = 'False'
             }
-            steps {
-               echo  'simple stuff'
+            steps { 
+                ansiblePlaybook(
+                    credentialsId: 'SSH_AGENT_CONNECT', 
+                    inventory: 'inventories/dev', 
+                    playbook: 'playbook.yml'
+                )
             }
         }
     }
