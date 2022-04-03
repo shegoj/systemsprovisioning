@@ -7,13 +7,7 @@ pipeline {
                 ANSIBLE_HOST_KEY_CHECKING = 'False'
             }
             steps {
-                sh ''' 
-                ansiblePlaybook(
-                    credentialsId: 'SSH_AGENT_CONNECT', 
-                    inventory: 'inventories/dev', 
-                    playbook: 'playbook.yml'
-                )
-                '''
+               echo  'simple stuff'
             }
         }
     }
