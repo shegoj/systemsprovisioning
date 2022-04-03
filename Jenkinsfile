@@ -7,8 +7,7 @@ pipeline {
                 ANSIBLE_HOST_KEY_CHECKING = 'False'
             }
             steps {
-                sh '''
-                git clone https://github.com/shegoj/systemsprovisioning.git .
+                sh ''' 
                 ansiblePlaybook(
                     credentialsId: 'SSH_AGENT_CONNECT', 
                     inventory: 'inventories/dev', 
